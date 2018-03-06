@@ -29,6 +29,8 @@ class CardsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    
     @IBAction func dragged(_ sender: UIPanGestureRecognizer) {
         var velocity = sender.velocity(in: view)
         let translation = sender.translation(in: view)
@@ -60,6 +62,17 @@ class CardsViewController: UIViewController {
             }
             //ryanImage.transform = CGAffineTransform.identity
             ryanImage.center = cardInitialCenter
+        }
+    }
+    
+    @IBAction func didTapImage(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "profileSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "profileSegue"){
+            let profileDetails = segue.destination as! ProfileViewController
+            profileDetails.myImage = self.ryanImage.image
         }
     }
     /*

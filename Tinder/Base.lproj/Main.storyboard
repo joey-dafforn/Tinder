@@ -33,8 +33,10 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="nsS-JL-KFM" appends="YES" id="YAL-ol-C6v"/>
+                                    <outletCollection property="gestureRecognizers" destination="zjf-Px-3oT" appends="YES" id="wNw-z6-Qsy"/>
                                 </connections>
                             </view>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="action_buttons" translatesAutoresizingMaskIntoConstraints="NO" id="kpx-MC-mLh">
@@ -52,6 +54,7 @@
                     <connections>
                         <outlet property="asdfView" destination="S2b-NO-uef" id="fEn-u5-LPS"/>
                         <outlet property="ryanImage" destination="XHi-Qq-Rdc" id="WpV-BP-W6u"/>
+                        <segue destination="q6A-DJ-tFy" kind="presentation" identifier="profileSegue" id="26f-cB-VaU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -60,13 +63,56 @@
                         <action selector="dragged:" destination="BYZ-38-t0r" id="Y3e-VT-Rgy"/>
                     </connections>
                 </panGestureRecognizer>
+                <tapGestureRecognizer id="zjf-Px-3oT">
+                    <connections>
+                        <action selector="didTapImage:" destination="BYZ-38-t0r" id="9SP-Ta-P5B"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="456.80000000000001" y="118.29085457271366"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="Fa1-cn-ioS">
+            <objects>
+                <viewController id="q6A-DJ-tFy" customClass="ProfileViewController" customModule="Tinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kob-Ig-nzb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OqF-oI-Fq4">
+                                <rect key="frame" x="45" y="144" width="284" height="394"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="nav_bar2" translatesAutoresizingMaskIntoConstraints="NO" id="kWv-F4-xfj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJ9-rR-PcN">
+                                <rect key="frame" x="35" y="34" width="41" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="clickedDone:" destination="q6A-DJ-tFy" eventType="touchUpInside" id="Hwd-Jk-wxl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Zed-UH-eM5"/>
+                    </view>
+                    <connections>
+                        <outlet property="profileImage" destination="OqF-oI-Fq4" id="Ubm-A2-ure"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jor-m1-P3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221.5999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
     <resources>
         <image name="action_buttons" width="320" height="108"/>
         <image name="nav_bar" width="320" height="65"/>
+        <image name="nav_bar2" width="320" height="65"/>
         <image name="ryan" width="449" height="514"/>
     </resources>
 </document>

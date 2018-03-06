@@ -14,6 +14,7 @@
 		7C19425C204CDB790046C7BB /* TinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C19425B204CDB790046C7BB /* TinderTests.swift */; };
 		7C194267204CDB790046C7BB /* TinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C194266204CDB790046C7BB /* TinderUITests.swift */; };
 		7C19427D204CDDCC0046C7BB /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C19427C204CDDCC0046C7BB /* CardsViewController.swift */; };
+		7CA34576204E17D60035C42C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA34575204E17D60035C42C /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		7C194266204CDB790046C7BB /* TinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderUITests.swift; sourceTree = "<group>"; };
 		7C194268204CDB790046C7BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C19427C204CDDCC0046C7BB /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
+		7CA34575204E17D60035C42C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				7C19424F204CDB790046C7BB /* LaunchScreen.storyboard */,
 				7C194252204CDB790046C7BB /* Info.plist */,
 				7C19427C204CDDCC0046C7BB /* CardsViewController.swift */,
+				7CA34575204E17D60035C42C /* ProfileViewController.swift */,
 			);
 			path = Tinder;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CA34576204E17D60035C42C /* ProfileViewController.swift in Sources */,
 				7C19427D204CDDCC0046C7BB /* CardsViewController.swift in Sources */,
 				7C194247204CDB790046C7BB /* AppDelegate.swift in Sources */,
 			);
